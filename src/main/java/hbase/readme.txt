@@ -1,0 +1,4 @@
+# java版本hbase curd 直接中官网上查找就有了
+hbase 操作提供了scala版本和java版本，目的是为了适用不同的场景
+1 中实时计算中为了调整保存中hbase中的数据就要用spark streaming操作
+2 标签提取过程把标签写入到hbase调用的是java接口更合适
