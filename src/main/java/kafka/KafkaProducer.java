@@ -4,6 +4,7 @@ import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 import kafka.serializer.StringEncoder;
 
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -22,9 +23,18 @@ public class KafkaProducer extends Thread {
     @Override
     public void run() {
         Producer producer = createProducer();
-        int i=0;
         while(true){
-            producer.send(new KeyedMessage<Integer, String>(topic, "message: " + i++));
+            byte[] buffer=new byte[512];
+            try {
+                //用户输入
+                System.in.read(buffer);
+                String str=new String(buffer);
+                String str_format = str.replaceAll("[\\t\\n\\r]", "");
+                producer.send(new KeyedMessage<Integer, String>(topic, str_format ));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
