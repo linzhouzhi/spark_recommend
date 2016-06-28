@@ -17,9 +17,8 @@ object spark_rdd extends App{
   val sc = new SparkContext(sparkConf)
 
   var hConf = HBaseConfiguration.create()
-  hConf.set("hbase.zookeeper.property.clientPort", "2181" )
-  hConf.set("hbase.zookeeper.quorum", "192.168.1.221,192.168.1.222,192.168.1.223" )
   hConf.set("hbase.master", "hadoop006:16010" )
+  hConf.addResource( "/home/lzz/work/idea_work/spark_work/spark_recommend/src/main/resources/hbase-site.xml" )
   hConf.set(TableInputFormat.INPUT_TABLE, "user_tags")
 
 
