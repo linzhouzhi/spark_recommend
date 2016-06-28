@@ -272,6 +272,11 @@
       <root url="jar://$USER_HOME$/soft/spark/assembly/target/scala-2.11/jars/xmlenc-0.52.jar!/" />
       <root url="jar://$USER_HOME$/soft/spark/assembly/target/scala-2.11/jars/xz-1.0.jar!/" />
       <root url="jar://$USER_HOME$/soft/spark/assembly/target/scala-2.11/jars/zookeeper-3.4.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.8.2-beta/kafka-clients-0.8.2-beta.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.10/0.8.2-beta/kafka_2.10-0.8.2-beta.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.0.0-SNAPSHOT/spark-streaming-kafka-0-8_2.11-2.0.0-20160531.100853-30.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/101tec/zkclient/0.3/zkclient-0.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
