@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * Created by lzz on 6/28/16.
   */
-object spark_rdd extends App{
+object Spark_RDD extends App{
   val sparkConf = new SparkConf().setMaster("local")
     .setAppName("My App")
     .set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
