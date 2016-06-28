@@ -17,6 +17,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 /**
  * Created by lzz on 6/28/16.
+ * 相关例子 http://hbase.apache.org/apidocs/index.html
  */
 public class Hbase_CURD {
     public static void main(String[] args) throws IOException {

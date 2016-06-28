@@ -9,6 +9,7 @@ import scala.collection.JavaConversions._
 
 /**
   * Created by lzz on 6/28/16.
+  * 相关例子 https://wiki.apache.org/hadoop/Hbase/Scala
   */
 object Hbase_CRUD extends App{
   val sparkConf = new SparkConf().setMaster("local")
