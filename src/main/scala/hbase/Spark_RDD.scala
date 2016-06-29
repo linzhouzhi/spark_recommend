@@ -18,7 +18,7 @@ object Spark_RDD extends App{
 
   var hConf = HBaseConfiguration.create()
   hConf.set("hbase.master", "hadoop006:16010" )
-  hConf.addResource( "/home/lzz/work/idea_work/spark_work/spark_recommend/src/main/resources/hbase-site.xml" )
+  hConf.addResource( "main/resources/hbase-site.xml" )
   hConf.set(TableInputFormat.INPUT_TABLE, "user_tags")
 
 

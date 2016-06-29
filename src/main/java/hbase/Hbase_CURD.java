@@ -27,7 +27,7 @@ public class Hbase_CURD {
         // be found on the CLASSPATH
         Configuration config = HBaseConfiguration.create();
         config.set("hbase.master", "hadoop006:16010" );
-        config.addResource( "/home/lzz/work/idea_work/spark_work/spark_recommend/src/main/resources/hbase-site.xml" );         
+        config.addResource( "main/resources/hbase-site.xml" );
         // Next you need a Connection to the cluster. Create one. When done with it,
         // close it. A try/finally is a good way to ensure it gets closed or use
         // the jdk7 idiom, try-with-resources: see
