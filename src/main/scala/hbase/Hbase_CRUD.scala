@@ -45,7 +45,7 @@ object Hbase_CRUD extends App{
       val p = new Put("rk001".getBytes)
       //为put操作指定 column 和 value 
       p.addColumn("cf".getBytes,"name".getBytes, "linzhouzhi".getBytes)
-      p.addColumn("cf".getBytes,"password".getBytes, "111111".getBytes)
+      p.addColumn("cf".getBytes,"password".getBytes, "22222".getBytes)
       //提交
       table.put(p)
 

@@ -57,3 +57,6 @@ public class KafkaProducer extends Thread {
 
     }
 }
+
+
+// user1|3|5

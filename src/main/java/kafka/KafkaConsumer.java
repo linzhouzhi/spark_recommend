@@ -39,7 +39,7 @@ public class KafkaConsumer extends Thread {
 
     private ConsumerConnector createConsumer() {
         Properties properties = new Properties();
-        properties.put("zookeeper.connect", "192.168.1.221:2181,192.168.1.222:2181,192.168.1.223:2181");//声明zk
+        properties.put("zookeeper.connect", "192.168.1.223:2181,192.168.1.221:2181,192.168.1.222:2181");//声明zk
         properties.put("group.id", "group001");// 必须要使用别的组名称， 如果生产者和消费者都在同一组，则不能访问同一组内的topic数据
         return Consumer.createJavaConsumerConnector(new ConsumerConfig(properties));
     }

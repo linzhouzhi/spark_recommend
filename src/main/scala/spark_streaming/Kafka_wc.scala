@@ -7,7 +7,7 @@ import org.apache.spark.streaming.{Minutes, Seconds, StreamingContext}
 /**
   * Created by lzz on 6/28/16.
   */
-object Kafka_demo extends App{
+object Kafka_wc extends App{
   val sparkConf = new SparkConf().setMaster("local")
     .setAppName("My App")
   val ssc = new StreamingContext(sparkConf, Seconds(1))
