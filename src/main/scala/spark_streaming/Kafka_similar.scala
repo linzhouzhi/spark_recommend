@@ -6,6 +6,7 @@ import org.apache.spark.SparkConf
 import org.apache.spark.mllib.linalg._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Minutes, Seconds, StreamingContext}
+import redis.clients.jedis.Jedis
 
 import scala.collection.immutable.IndexedSeq
 
@@ -21,6 +22,10 @@ object Kafka_similar extends App{
   val conn = ConnectionFactory.createConnection(conf)
   val testTable = TableName.valueOf("test")
   val table = conn.getTable(testTable)
+
+  val jedis = new Jedis("192.168.1.220",6379)
+  jedis.incr( "web_80_07_pv" )
+  jedis.close()
 
   val ad_tags: Matrix = Matrices.dense(3, 2, Array(1.0, 3.0, 5.0, 2.0, 4.0, 6.0))
   //val dm_sparse: Matrix = Matrices.sparse( 3,2, Array(0, 1,6), Array(0, 0, 1,1,2,2), Array(3, 4, 1,2,4,5))
